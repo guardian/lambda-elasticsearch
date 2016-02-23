@@ -1,0 +1,31 @@
+{
+  "name": "lambda-elasticsearch",
+  "version": "1.0.0",
+  "description": "Helper to send elasticsearch request from a lambda",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:guardian/lambda-elasticsearch.git"
+  },
+  "author": {
+    "name": "Fabio Crisci",
+    "email": "piuccio@gmail.com"
+  },
+  "engines": {
+    "node": "0.10.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "tap test.js"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "elasticsearch"
+  ],
+  "devDependencies": {
+    "tap": "^5.7.0"
+  }
+}

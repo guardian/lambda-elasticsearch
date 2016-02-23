@@ -1,0 +1,40 @@
+{
+	"env": {
+		"node": true,
+		"es6": false
+	},
+	"extends": "eslint:recommended",
+	"parserOptions": {
+		"ecmaVersion": 5,
+		"ecmaFeatures": {
+			"globalReturn": true,
+		}
+	},
+	"rules": {
+		"camelcase": 2,
+		"consistent-return": 0,
+		"key-spacing": 0,
+		"new-cap": 0,
+		"no-alert": 0,
+		"no-caller": 2,
+		"no-console": 0,
+		"no-multi-spaces": 0,
+		"no-shadow": 0,
+		"no-undef": 2,
+		"no-underscore-dangle": 0,
+		"no-unused-vars": 2,
+		"no-use-before-define": [2, "nofunc"],
+		"quotes": [1, "single"],
+		"semi": 2,
+		"keyword-spacing": [2, {"before": true, "after": true}],
+		"space-before-function-paren": 1,
+		"strict": 2,
+		"array-callback-return": 1,
+		"no-self-assign": 2,
+		"id-blacklist": [2, "self"],
+		"template-curly-spacing": [2, "never"]
+	},
+	"globals": {
+		"Promise": false
+	}
+}
