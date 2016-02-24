@@ -152,6 +152,7 @@ tap.test('fails on AWS status error with plain text', function (test) {
 	}, function (err) {
 		test.type(err, Error);
 		test.match(err.message, /plain text/i);
+		test.match(err.responseText, /plain text/i);
 		test.end();
 	});
 });
@@ -165,7 +166,7 @@ tap.test('fails on AWS status error with JSON', function (test) {
 
 			process.nextTick(function () {
 				emitter.emit('data', JSON.stringify({
-					message: 'json error'
+					Message: 'json error'
 				}));
 				emitter.emit('end');
 			});
@@ -177,6 +178,7 @@ tap.test('fails on AWS status error with JSON', function (test) {
 	}, function (err) {
 		test.type(err, Error);
 		test.match(err.message, /json error/i);
+		test.match(err.responseText, /json error/i);
 		test.end();
 	});
 });

@@ -65,12 +65,14 @@ module.exports = function (AWS, config) {
 				var errorMessage;
 				try {
 					var errorResponse = JSON.parse(respBody);
-					errorMessage = errorResponse.message;
+					errorMessage = errorResponse.Message;
 				} catch (ex) {
 					errorMessage = respBody;
 				}
 				process.nextTick(function () {
-					callback(new Error(errorMessage));
+					var error = new Error(errorMessage);
+					error.responseText = respBody;
+					callback(error);
 				});
 			}
 		});

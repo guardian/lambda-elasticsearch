@@ -1,6 +1,6 @@
 {
   "name": "lambda-elasticsearch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Helper to send elasticsearch request from a lambda",
   "license": "Apache-2.0",
   "repository": {
