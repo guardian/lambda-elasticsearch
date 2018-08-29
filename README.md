@@ -13,7 +13,8 @@ npm install --save lambda-elasticsearch
 ## Usage
 
 ```js
-var elastic = require('lambda-elasticsearch')({
+var AWS = require('aws-sdk');
+var elastic = require('lambda-elasticsearch')(AWS, {
 	endpoint: 'your.elasticsearch.es.amazon.com',
 	region: 'eu-west-1'
 });
